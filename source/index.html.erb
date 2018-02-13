@@ -20,8 +20,13 @@ title: Welcome to Middleman
   Middleman is Running
 </h1>
 
-<%= link_to(
-  "Read Documentation",
-  "https://middlemanapp.com/basics/templating_language/",
-  target: "_blank"
-) %>
+<h2>
+  Here is some content from "Contentful"
+</h2>
+
+<% data.api.course.each do |i, c| %>
+    <div>
+    <h3><%= c[:title] %></h3>
+    <p><%= c[:short_description] %></p>
+    </div>
+  <% end %>

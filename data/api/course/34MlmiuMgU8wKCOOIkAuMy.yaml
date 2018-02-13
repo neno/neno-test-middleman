@@ -1,0 +1,464 @@
+---
+:id: 34MlmiuMgU8wKCOOIkAuMy
+:_meta:
+  :content_type_id: course
+  :updated_at: '2018-02-13T07:40:30+00:00'
+  :created_at: '2018-02-13T07:40:30+00:00'
+  :id: 34MlmiuMgU8wKCOOIkAuMy
+:title: Hallo SDKs
+:slug: hello-sdks
+:image:
+  :title: ''
+  :description: 
+  :url: "//images.contentful.com/ogkuoprm03sm/6nvWJT1AkM64so8Auue4QQ/601740146a30c6bbef70a2a525d678d3/EngineeringHistory.png"
+  :_meta:
+    :updated_at: '2018-02-13T07:40:37+00:00'
+    :created_at: '2018-02-13T07:40:37+00:00'
+    :id: 6nvWJT1AkM64so8Auue4QQ
+:short_description: Lernen Sie den Umgang mit unseren SDKs.
+:description: Sobald Sie sich den Quellcode der Besipielanwendung ansehen, werden
+  Sie ein Gespür entwickeln, wie Sie am besten die Contentful SDKs in Ihrer Programmiersprache
+  benutzen. Für weitere, fremde Abhängigkeiten, schauen Sie bitte in der jewiligen
+  Dokumentation nach.
+:duration: 5
+:skill_level: beginner
+:lessons:
+- :id: 5mgMoU9aCWE88SIqSIMGYE
+  :_meta:
+    :content_type_id: lesson
+    :updated_at: '2018-02-13T07:40:31+00:00'
+    :created_at: '2018-02-13T07:40:31+00:00'
+    :id: 5mgMoU9aCWE88SIqSIMGYE
+  :title: SDK Basiswissen
+  :slug: sdk-basics
+  :modules:
+  - :id: 3Y1JQg9bjqIG6OgA2KAM4A
+    :_meta:
+      :content_type_id: lessonCopy
+      :updated_at: '2018-02-13T07:40:33+00:00'
+      :created_at: '2018-02-13T07:40:33+00:00'
+      :id: 3Y1JQg9bjqIG6OgA2KAM4A
+    :title: SDK basics > installation
+    :copy: |-
+      Um die Kommunikation mit Contentful so einfach wie nur möglich zu gestallten, haben wir verschiedene Open Source SDKs erzeugt.
+
+      Installieren Sie die SDKs wie folgt:
+  - :id: 1ph3B44420k2wgG8y2aYcM
+    :_meta:
+      :content_type_id: lessonCodeSnippets
+      :updated_at: '2018-02-13T07:40:36+00:00'
+      :created_at: '2018-02-13T07:40:36+00:00'
+      :id: 1ph3B44420k2wgG8y2aYcM
+    :title: SDK basics > installation - code
+    :curl: "# N/A"
+    :dot_net: dotnet add package contentful.csharp
+    :javascript: npm install contentful
+    :java: compile 'com.contentful.java:java-sdk:+'
+    :java_android: compile 'com.contentful.java:java-sdk:+'
+    :php: composer require contentful/contentful
+    :python: pip install contentful
+    :ruby: gem install contentful
+    :swift: |-
+      // Add to your Podfile
+
+      pod 'Contentful', '~> 0.10.1'
+
+      // Then execute "pod install" in your projects directory
+  - :id: 15Cx6Bu1Y2qAkyq2yWgkK2
+    :_meta:
+      :content_type_id: lessonCopy
+      :updated_at: '2018-02-13T07:40:36+00:00'
+      :created_at: '2018-02-13T07:40:36+00:00'
+      :id: 15Cx6Bu1Y2qAkyq2yWgkK2
+    :title: SDK basics > SDK initialization
+    :copy: |-
+      Benutzen Sie das SDK in ihrem eigenen Projekt und inizialisieren Sie den `Client` wie folgt:
+
+      1. Fügen Sie den `import`-Ausdruck an.
+      2. Konfigurieren Sie den `Client` mit der Space ID und dem Content Delivery Token.
+  - :id: 1u8xSIQR4UaoQOc4m6KiiU
+    :_meta:
+      :content_type_id: lessonCodeSnippets
+      :updated_at: '2018-02-13T07:40:35+00:00'
+      :created_at: '2018-02-13T07:40:35+00:00'
+      :id: 1u8xSIQR4UaoQOc4m6KiiU
+    :title: SDK basics > SDK initialization - code
+    :curl: |-
+      export CDA_TOKEN='<access_token>';
+      export SPACE_ID='<space_id>';
+    :dot_net: |-
+      var httpClient = new HttpClient();
+      var client = new ContentfulClient(httpClient, "<access_token>", "", "<space_id>");
+    :javascript: |
+      const contentful = require('contentful')
+      const client = contentful.createClient({
+        space: '<space_id>',
+        accessToken: '<access_token>'
+      })
+    :java: |
+      final CDAClient client =
+          CDAClient
+              .builder()
+              .setToken("<access_token>")
+              .setSpace("<space_id>")
+              .build();
+    :java_android: |
+      final CDAClient client =
+          CDAClient
+              .builder()
+              .setToken("<access_token>")
+              .setSpace("<space_id>")
+              .build();
+    :php: |-
+      $client = new \Contentful\Delivery\Client(
+          '<access_token>',
+          '<space_id>'
+      );
+    :python: |
+      import contentful
+
+      client = contentful.Client('<space_id>', '<access_token>')
+    :ruby: |-
+      require ‘contentful’
+
+      client = Contentful::Client.new(
+        space: '<space_id>',
+        access_token: '<access_token>',
+        dynamic_entries: :auto,
+        raise_errors: true
+      )
+    :swift: "import Contentful\n\nlet client = Client(spaceId: \"<space_id>\", \n
+      \                   accessToken: \"<access_token>\")"
+  - :id: 3k6uoYm9i8MycCm42IsY62
+    :_meta:
+      :content_type_id: lessonCopy
+      :updated_at: '2018-02-13T07:40:33+00:00'
+      :created_at: '2018-02-13T07:40:33+00:00'
+      :id: 3k6uoYm9i8MycCm42IsY62
+    :title: SDK basics > SDK initialization - API token tip
+    :copy: Sind APIs neu für Sie? Ein API Token stellt sicher, das nur authorisierte
+      Personen oder Anwendungen Zugriff auf ihren Space haben.
+- :id: 3jkW4CdxPqu8Q2oSgCeOuy
+  :_meta:
+    :content_type_id: lesson
+    :updated_at: '2018-02-13T07:40:34+00:00'
+    :created_at: '2018-02-13T07:40:34+00:00'
+    :id: 3jkW4CdxPqu8Q2oSgCeOuy
+  :title: Laden aller Einträge
+  :slug: fetch-all-entries
+  :modules:
+  - :id: 5WZ7JD9Hb2Myi6uYYSscIw
+    :_meta:
+      :content_type_id: lessonCopy
+      :updated_at: '2018-02-13T07:40:36+00:00'
+      :created_at: '2018-02-13T07:40:36+00:00'
+      :id: 5WZ7JD9Hb2Myi6uYYSscIw
+    :title: Fetch all entries > introduction
+    :copy: Nun, da Sie den Contentful `Client` konfiguriert haven, können Sie ihn
+      benutzen um alle Einträge, sog. `Entries`, von Ihrem Space zu laden.
+  - :id: 3QJuO2TNxm0OqSgIMaoCwi
+    :_meta:
+      :content_type_id: lessonCodeSnippets
+      :updated_at: '2018-02-13T07:40:34+00:00'
+      :created_at: '2018-02-13T07:40:34+00:00'
+      :id: 3QJuO2TNxm0OqSgIMaoCwi
+    :title: Fetch all entries > code
+    :curl: 'curl -H ''Authorization: Bearer ''$CDA_TOKEN ''https://cdn.contentful.com/spaces/''$SPACE_ID''/entries/'''
+    :dot_net: |-
+      var entry = await client.GetEntries<dynamic>();
+
+      Console.WriteLine(entry.ToString());
+    :javascript: |-
+      client.getEntries()
+      .then((response) => console.log(response))
+    :java: |
+      final CDAArray all =
+          client
+              .fetch(CDAEntry.class)
+              .all();
+
+      System.out.println(all);
+    :java_android: |-
+      client
+          .observe(CDAEntry.class)
+          .all()
+          .observeOn(AndroidSchedulers.mainThread())
+          .subscribeOn(io.reactivex.schedulers.Schedulers.io())
+          .subscribe(
+              new DisposableSubscriber<CDAArray>() {
+                CDAArray result;
+
+                @Override public void onComplete() {
+                  new AlertDialog.Builder(context)
+                      .setTitle("Contentful")
+                      .setMessage(result.toString())
+                      .show();
+                }
+
+                @Override public void onError(Throwable e) {
+                  // Handle error case.
+                  new AlertDialog.Builder(context)
+                      .setTitle("Contentful")
+                      .setMessage("An error occurred: " + e.toString())
+                      .show();
+                }
+
+                @Override public void onNext(CDAArray array) {
+                  // Array received, maybe more to come.
+                  result = entry;
+                }
+              }
+    :php: |-
+      $entries = $client->getEntries();
+
+      var_dump($entries);
+    :python: |-
+      entries = client.entries()
+      print(repr(entries))
+    :ruby: |-
+      entries = client.entries()
+      puts(entries)
+    :swift: |-
+      client.fetchEntries() { (result: Result<ArrayResponse<Entry>>) in
+          switch result {
+              case .success(arrayResponse):
+                  let entries = arrayResponse.items
+                  print(entries)
+              case .error(let error):
+                  print("Error \(error)!")
+          }
+      }
+- :id: Dy6jo5j4goU2C4sc8Kwkk
+  :_meta:
+    :content_type_id: lesson
+    :updated_at: '2018-02-13T07:40:34+00:00'
+    :created_at: '2018-02-13T07:40:34+00:00'
+    :id: Dy6jo5j4goU2C4sc8Kwkk
+  :title: Laden von Entwürfen
+  :slug: fetch-draft-content
+  :modules:
+  - :id: 1wMm7tnKi0kIYsI24eYiKS
+    :_meta:
+      :content_type_id: lessonCopy
+      :updated_at: '2018-02-13T07:40:34+00:00'
+      :created_at: '2018-02-13T07:40:34+00:00'
+      :id: 1wMm7tnKi0kIYsI24eYiKS
+    :title: 'Fetch draft content > preview '
+    :copy: |-
+      Bevor Sie Inhalte veröffentlichen, können Sie sie mittels unserer Content Preview API ansehen. Die Preview API und Delivery API akzeptieren beide die gleichen Parameter und liefern die gleichen `payload`-Strukturen zurück.
+
+      Um Inhalte im Entwurfs-Zustand zu laden, müssen Sie die Konfiguration des `Clients` um den Preview API Token erweitern:
+  - :id: 4Zg99dYM5awic2iwIKo6EW
+    :_meta:
+      :content_type_id: lessonCodeSnippets
+      :updated_at: '2018-02-13T07:40:35+00:00'
+      :created_at: '2018-02-13T07:40:35+00:00'
+      :id: 4Zg99dYM5awic2iwIKo6EW
+    :title: Fetch draft content > code
+    :curl: |-
+      export CPA_TOKEN='<cpa_token>';
+      export SPACE_ID='<space_id>';
+    :dot_net: |-
+      var httpClient = new HttpClient();
+      var client = new ContentfulClient(httpClient, "", "<cpa_token>", "<space_id>", usePreviewApi: true);
+    :javascript: |-
+      const contentful = require('contentful')
+      const client = contentful.createClient({
+        space: '<space_id>',
+        accessToken: '<cpa_token>',
+        host: 'preview.contentful.com'
+      })
+    :java: |-
+      final CDAClient client =
+          CDAClient
+              .builder()
+              .setToken("<cpa_token>")
+              .preview()
+              .setSpace("<space_id>")
+              .build();
+    :java_android: |-
+      final CDAClient client =
+          CDAClient
+              .builder()
+              .setToken("<cpa_token>")
+              .preview()
+              .setSpace("<space_id>")
+              .build();
+    :php: |-
+      $client = new \Contentful\Delivery\Client(
+          '<cpa_token>',
+          '<space_id>',
+          true
+      );
+    :python: |-
+      import contentful
+
+      client = contentful.Client('<space_id>', '<cpa_token>', api_url='preview.contentful.com')
+    :ruby: |-
+      require ‘contentful’
+
+      client = Contentful::Client.new(
+        space: '<space_id>',
+        access_token: '<cpa_token>',
+        dynamic_entries: :auto,
+        api_url: 'preview.contentful.com',
+        raise_errors: true
+      )
+    :swift: "var configuration = ClientConfiguration()\nconfiguration.previewMode
+      = true\n\n// Retain the client as a property on a type you define so that \n//
+      the client's asynchronous network callbacks are executed.\nlet client = Client(spaceId:
+      \"<space_id>\", accessToken: \"<cpa_token>\")"
+  - :id: 4ZQtjYftNKaoKWuksM0sS0
+    :_meta:
+      :content_type_id: lessonCopy
+      :updated_at: '2018-02-13T07:40:34+00:00'
+      :created_at: '2018-02-13T07:40:34+00:00'
+      :id: 4ZQtjYftNKaoKWuksM0sS0
+    :title: Fetch draft content > footnote
+    :copy: |-
+      Diese Beispielanwendung is so konfiguriert worden, dass sie sich sowohl mit der Deliver API als auch der Preview API verbinden kann.
+
+      Zum Spaß können Sie die Formatierung des Wortes *Pizza* ändern, indem sie im oberen Menü die Auswahl von `API: Preview (unveröffentlichter Inhalt)` auf `API: Delivery (veröffentlichter Inhalt)` ändern.
+
+      > Hinweis: Die Content Preview API ist nicht hinter einem Cache und daher etwas langsamer als die Delivery API.
+- :id: 1HR1QvURo4MoSqO0eqmUeO
+  :_meta:
+    :content_type_id: lesson
+    :updated_at: '2018-02-13T07:40:32+00:00'
+    :created_at: '2018-02-13T07:40:32+00:00'
+    :id: 1HR1QvURo4MoSqO0eqmUeO
+  :title: Übersetzten Inhalt ausliefern
+  :slug: serve-localized-content
+  :modules:
+  - :id: 2tV9n41tryO2QMwIkQUQeQ
+    :_meta:
+      :content_type_id: lessonCopy
+      :updated_at: '2018-02-13T07:40:35+00:00'
+      :created_at: '2018-02-13T07:40:35+00:00'
+      :id: 2tV9n41tryO2QMwIkQUQeQ
+    :title: Serve localized content > fetching
+    :copy: 'Falls Sie verschiedene Sprachen in ihrem `Content Model` benutzen, können
+      sie den übersetzten Inhalt wie folgt erhalten:'
+  - :id: 5u5i90HuEgcOYKacSoMEG6
+    :_meta:
+      :content_type_id: lessonCodeSnippets
+      :updated_at: '2018-02-13T07:40:35+00:00'
+      :created_at: '2018-02-13T07:40:35+00:00'
+      :id: 5u5i90HuEgcOYKacSoMEG6
+    :title: Serve localized content > fetch code
+    :curl: |-
+      entry = client.entry('2uNOpLMJioKeoMq8W44uYc', locale: 'de-DE')
+      puts(entry.fields)
+    :dot_net: |-
+      var queryBuilder = QueryBuilder<dynamic>.New.LocaleIs("de-DE");
+      var entries = await client.GetEntriesAsync(queryBuilder);
+      Console.WriteLine(entries.ToString());
+    :javascript: |-
+      client.getEntries({'locale': 'de-DE'}).then((response) => {
+        console.log(response)
+      })
+    :java: |-
+      final CDAArray all =
+          client
+              .fetch(CDAEntry.class)
+              .where("locale", "de-DE")
+              .all();
+
+      System.out.println(all.toString());
+    :java_android: |-
+      client
+          .observe(CDAEntry.class)
+          .where("locale", "de-DE")
+          .all()
+          .observeOn(AndroidSchedulers.mainThread())
+          .subscribeOn(io.reactivex.schedulers.Schedulers.io())
+          .subscribe(
+              new DisposableSubscriber<CDAArray>() {
+                CDAArray result;
+
+                @Override public void onComplete() {
+                  new AlertDialog.Builder(context)
+                      .setTitle("Contentful")
+                      .setMessage(result.toString())
+                      .show();
+                }
+
+                @Override public void onError(Throwable e) {
+                  // Handle error case.
+                  new AlertDialog.Builder(context)
+                      .setTitle("Contentful")
+                      .setMessage("An error occurred: " + e.toString())
+                      .show();
+                }
+
+                @Override public void onNext(CDAArray entry) {
+                  // Array received, maybe more to come.
+                  result = entry;
+                }
+              }
+    :php: |-
+      $query = (new Contentful\Delivery\Query())
+          ->setLocale('de-DE');
+
+      $entries = $client->getEntries($query);
+
+      var_dump($entries);
+    :python: |-
+      entry = client.entry('2uNOpLMJioKeoMq8W44uYc', {'locale': 'de-DE'})
+      print(entry.fields())
+    :ruby: |-
+      entry = client.entry('2uNOpLMJioKeoMq8W44uYc', locale: 'de-DE')
+      puts(entry.fields)
+    :swift: |-
+      let query = Query(where: "locale", .equals("de-DE"))
+
+      client.fetchEntries(with: query) { (result: Result<ArrayResponse<Entry>>) in
+        switch result {
+        case .success(let arrayResponse):
+          let entries = arrayResponse.items
+          print(entries)
+        case .error(let error):
+          print(error)
+        }
+      }
+  - :id: 58B62ubQbmIOiAkmq44kAo
+    :_meta:
+      :content_type_id: lessonCopy
+      :updated_at: '2018-02-13T07:40:34+00:00'
+      :created_at: '2018-02-13T07:40:34+00:00'
+      :id: 58B62ubQbmIOiAkmq44kAo
+    :title: Serve localized content > code success
+    :copy: 'Nun können sie die Sprache von Deutsch auf Englisch ändern, indem sie
+      im obigen Menü den Eintrag `Sprache: German` auf `US English` ändern.'
+- :id: 5VWYVBc39Cia0sqqaeyiIW
+  :_meta:
+    :content_type_id: lesson
+    :updated_at: '2018-02-13T07:40:31+00:00'
+    :created_at: '2018-02-13T07:40:31+00:00'
+    :id: 5VWYVBc39Cia0sqqaeyiIW
+  :title: Zusammenfassung
+  :slug: example-app-summary
+  :modules:
+  - :id: 4Ng6zmj9e8Sw0eaYKQM8Es
+    :_meta:
+      :content_type_id: lessonCopy
+      :updated_at: '2018-02-13T07:40:32+00:00'
+      :created_at: '2018-02-13T07:40:32+00:00'
+      :id: 4Ng6zmj9e8Sw0eaYKQM8Es
+    :title: Hello SDKs > summary copy
+    :copy: 'Nun wissen Sie wie diese Beispielanwendung mit einem Contentful SDK gebaut
+      wurde. Um Ihr Verständnis zu vertiefen, empfehlen wir Ihnen den Quellcode dieser
+      Anwendung herunterzuladen und zu studieren. Falls Sie weitere Fragen haben,
+      stehen wir Ihnen gerne mit unserer [Contentful Community](https://www.contentfulcommunity.com/)
+      oder unserem [Support](https://www.contentful.com/support/) zur Verfügung. Alternativ
+      besuchen Sie unsere [tutorials](https://www.contentful.com/developers/docs/tutorials/)
+      in der Developer Dokumentation. '
+:categories:
+- :id: 7JhDodrNmwmwGmQqiACW4
+  :_meta:
+    :content_type_id: category
+    :updated_at: '2018-02-13T07:40:33+00:00'
+    :created_at: '2018-02-13T07:40:33+00:00'
+    :id: 7JhDodrNmwmwGmQqiACW4
+  :title: Anwendungsentwicklung
+  :slug: application-development

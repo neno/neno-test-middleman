@@ -1,0 +1,240 @@
+---
+:id: 1toEOumnkEksWakieoeC6M
+:_meta:
+  :content_type_id: course
+  :updated_at: '2018-02-13T07:40:32+00:00'
+  :created_at: '2018-02-13T07:40:32+00:00'
+  :id: 1toEOumnkEksWakieoeC6M
+:title: Hallo Contentful
+:slug: hello-contentful
+:image:
+  :title: ''
+  :description: 
+  :url: "//images.contentful.com/ogkuoprm03sm/6nvWJT1AkM64so8Auue4QQ/601740146a30c6bbef70a2a525d678d3/EngineeringHistory.png"
+  :_meta:
+    :updated_at: '2018-02-13T07:40:37+00:00'
+    :created_at: '2018-02-13T07:40:37+00:00'
+    :id: 6nvWJT1AkM64so8Auue4QQ
+:short_description: Lernen Sie, wie Sie Anwendungen mit Contentful bauen können.
+:description: "Diese Beispielanwendung hilft Ihnen, Ihre eigene Anwendung mittels
+  Contentful zu bauen. Sie enthält Module, die Ihnen verschiedene Grundkonzepte näher
+  bringen, Content-Modellierung erklärt und sie erläutert, wie Ihre eigene Anwendung
+  Inhalt von Contentful verarbeitet. Der Inhalt wird von den APIs von Contentful unter
+  zuhilfenahme von Contentful SDKs zurverfügung gestellt. \n\nDie Benutzeroberfläche
+  dieses Beispieles wird nur von dem Beispiel selbst benutzt und bediehnt sich _keines_
+  Templates. Dies ist Absicht, da es sich bei Contentful um ein `Headless CMS` handelt.
+  Was dies bedeuted, wird später nocheinmal verdeutlicht.   \n\nFolgende Themen werden
+  von diesem Kurs abgehandelt:\n\n- **Die APIs von Contentful**: Komponenten von Contentful.\n-
+  **Content-Modellierung**: Das Content-Modell der Anwendung.\n- **Integration mit
+  Contentful**: Wie wurde diese Anwendung mit Contentful verbunden?"
+:duration: 10
+:skill_level: beginner
+:lessons:
+- :id: 3op5VIqGZiwoe06c8IQIMO
+  :_meta:
+    :content_type_id: lesson
+    :updated_at: '2018-02-13T07:40:34+00:00'
+    :created_at: '2018-02-13T07:40:34+00:00'
+    :id: 3op5VIqGZiwoe06c8IQIMO
+  :title: APIs
+  :slug: apis
+  :modules:
+  - :id: 7iCSSldqDuUkG4GWa46uUq
+    :_meta:
+      :content_type_id: lessonCopy
+      :updated_at: '2018-02-13T07:40:33+00:00'
+      :created_at: '2018-02-13T07:40:33+00:00'
+      :id: 7iCSSldqDuUkG4GWa46uUq
+    :title: APIs > copy
+    :copy: |-
+      ## API-first
+
+      Contentful folgt der API-First-Denkweise, dies bedeutet, dass alle Funktionalitäten durch die API zur Verfügung gestellt werden.
+
+      D.h. Sie können:
+      - Datenschemata verändern, oder Webhooks durch die Content Managewment API konfigurieren.
+      - Platformunabhängigen Inhalt mittels unserer Contend Delivery API verteilen.
+      - Entwürfe von unveröffentlichten Inhalt durch unsere Content Preview API begutachten.
+      - Bilder skalieren, schneiden oder erneut komprimieren unter zuhilfenahme unserer Images API.
+
+      ![api first](//images.contentful.com/qz0n5cdakyl9/1YK5kwroV6UEGS64mQs0Eo/c19b700d5c8d0f44b758c4b2bb79c586/contentful-four-apis.svg)
+
+      Contentful ist ein sogennantes `Headless CMS`, das bedeuted, das kein `Templating` und kein Präsentationslayer fest mit Ihrem Inhalt verbunden ist. Stattdessen hat ein Entwickler die komplette Freiheit eine Anwendung zu bauen die Contentful benutzt. Auf diese Art und Weise, können Sie Ihre Anwendung komplett von Contentful entkoppeln können.
+
+      Dies sind die minimalen Anforderungen von Contentful:
+
+      - Unterstützung des Protokolls HTTP
+      - Verarbeitung von JSON-Daten
+
+      Mehr ist nicht nötig, Sie haben die Freiheit sich Ihre Technologie selbst auszusuchen.
+  - :id: 41fdMtrUzmiqKykUwA8u2A
+    :_meta:
+      :content_type_id: lessonImage
+      :updated_at: '2018-02-13T07:40:36+00:00'
+      :created_at: '2018-02-13T07:40:36+00:00'
+      :id: 41fdMtrUzmiqKykUwA8u2A
+    :title: APIs > image
+    :image:
+      :title: 'Diagram: JSON delivered multi platform'
+      :description: 
+      :url: "//images.contentful.com/ogkuoprm03sm/1PzXR2apawY8iYM4o0AUoi/da913aab94178b40dfb39b90249e41f8/json-presentation-layer.svg"
+      :_meta:
+        :updated_at: '2018-02-13T07:40:38+00:00'
+        :created_at: '2018-02-13T07:40:38+00:00'
+        :id: 1PzXR2apawY8iYM4o0AUoi
+    :caption: Contentfuls APIs senden Daten im JSON-Format. Hierdurch kann Inhalt
+      platformunabhängig benutzt werden.
+- :id: 5p9qNpTOJaCE6ykC4a8Wqg
+  :_meta:
+    :content_type_id: lesson
+    :updated_at: '2018-02-13T07:40:31+00:00'
+    :created_at: '2018-02-13T07:40:31+00:00'
+    :id: 5p9qNpTOJaCE6ykC4a8Wqg
+  :title: Content-Modell
+  :slug: content-model
+  :modules:
+  - :id: 4qT1W3HXewc0SscAs80UuA
+    :_meta:
+      :content_type_id: lessonCopy
+      :updated_at: '2018-02-13T07:40:34+00:00'
+      :created_at: '2018-02-13T07:40:34+00:00'
+      :id: 4qT1W3HXewc0SscAs80UuA
+    :title: Content model > copy
+    :copy: "Unter _Content-Modellierung_ versteht man die Art und Weise Inhalt zu
+      strukturieren. Hier in Contentful, passiert dies durch _Content Types_. Ein
+      Content Type kann man sich als Schema gleichen Inhalts vorstellen: Für jeden
+      Content Type spezifiziert man dessen Eigenschaften, hier _Fields_ genannt. Diese
+      _Fields_ repäsentieren ein Aspekt eines Content Types. \n\nSie können Content
+      Types auch sich gegenseitig referenzieren lassen.\n\n## Der Content Type dieser
+      Lektion\n\nDen Text den Sie hier lesen, wurde in Contentful gespeichert. Sein
+      Content Type sieht wie folgt aus:\n\n- Lesson: wird benutzt um Inhalt zu grupieren
+      und neu anzuordnen.\n- Lesson > Copy: Ein Block von Markdown-Text \n- Lesson
+      > Code: Ein Block von Quellcode\n- Lesson > Image: Ein Bild\n\n![content-model-lesson](//images.contentful.com/qz0n5cdakyl9/1nXjR47jxOagUcc8iU6wUQ/54f18a32ed182a6fcb4f49f3ae242067/content-model-lesson.svg)\n\nUm
+      eine _Lektion_ zu modellieren, wählten wir auch hier wieder die modulare Sichtweise:
+      Wir gaben dem Content Type _Lesson_ verschiedene Referenzen auf andere Content
+      Types.\n\nDiese Herangehensweise ist für Autoren vorteilhaft, da sie Teile des
+      Inhaltes so leicht neuanordnen können. Gleichzeitig können Entwickler die Kontrolle
+      behalten, wie einzelne Teile an Inhalt dargestellt werden.\n\n\n## Das Content-Modell
+      dieser Anwendung\n\nDas folgende Diagramm zeigt das gesamte Content-Modell dieser
+      Anwendung:\n\nIn detail:\n\n- Der _Layout_ Content Type referenziert den _Highlighted
+      course_ Content Type.\n- Der _Highlighted course_ Content Type referenziert
+      den _Course_ content type.\n- Der _Course_ Content Type referenziert den _Lesson_
+      Content Type.\n\nMit diesem Wissen, können Sie nun die Hierarchie der Besipielanwendung
+      erkunden. Dannach, erkunden Sie die Hierarchie der Content Types in der Contentful
+      Webanwendung. Sobald Sie dies getan haben, wird Ihr Verständniss für die Interaktion
+      zwischen Content-Modell und dessen Repräsentation innerhalb der Beispielanwendung
+      sich verbessern."
+  - :id: 6gFiJvssqQ62CMYqECOu2M
+    :_meta:
+      :content_type_id: lessonImage
+      :updated_at: '2018-02-13T07:40:35+00:00'
+      :created_at: '2018-02-13T07:40:35+00:00'
+      :id: 6gFiJvssqQ62CMYqECOu2M
+    :title: Content model > image
+    :image:
+      :title: 'Diagram: Content model of "The example app"'
+      :description: 
+      :url: "//images.contentful.com/ogkuoprm03sm/5o1Zu7UJheEGGQUC6gYEmS/be347a4b07753b4b76415566d1e44dff/content-model-full.svg"
+      :_meta:
+        :updated_at: '2018-02-13T07:40:37+00:00'
+        :created_at: '2018-02-13T07:40:37+00:00'
+        :id: 5o1Zu7UJheEGGQUC6gYEmS
+    :caption: Die Hierarchie der Content Types von der Startseite zu einer Lektion
+      mit ihren Modulen.
+  - :id: 3UVMv9wHuw4auWMQ0qSamY
+    :_meta:
+      :content_type_id: lessonCopy
+      :updated_at: '2018-02-13T07:40:36+00:00'
+      :created_at: '2018-02-13T07:40:36+00:00'
+      :id: 3UVMv9wHuw4auWMQ0qSamY
+    :title: Content model > validation copy
+    :copy: |-
+      ## Validierung von Feldern
+      Mit Hilfe von Validierungsregeln kann eine gewisse Konsistenz erzwungen werden. So kann z.B. verhindert werden, dass ungütlige Daten eine Anwendung zum Absturz bringen.
+
+      Beispiele für geläufige Validierungsregeln sind Limitierungen der Zeichenanzahl, erzwingen von gewissen Werten wie z.B. `Anfänger(in)`, `Fortgeschrittene(r)`, `Profi`. Auf den folgenden Seiten können Sie mehr über Validierung von feldern lernen:
+
+      - [Fields](https://www.contentful.com/developers/docs/concepts/data-model/#fields)
+      - [Available validations](https://www.contentful.com/r/knowledgebase/validations/#available-validations)
+
+      ![Screenshot: web app validations](//images.contentful.com/qz0n5cdakyl9/6n41KgxfwWmmeCiSemIsK2/8fe64869042e65dddb5178164bd2264f/validations.png)
+
+      Validierung in der Contentful web app.
+- :id: 1zwAjpe38UC8iqKMM6gu0Q
+  :_meta:
+    :content_type_id: lesson
+    :updated_at: '2018-02-13T07:40:31+00:00'
+    :created_at: '2018-02-13T07:40:31+00:00'
+    :id: 1zwAjpe38UC8iqKMM6gu0Q
+  :title: Content Management
+  :slug: content-management
+  :modules:
+  - :id: 1AqQQzRvKAkEOekuMUcQIY
+    :_meta:
+      :content_type_id: lessonCopy
+      :updated_at: '2018-02-13T07:40:32+00:00'
+      :created_at: '2018-02-13T07:40:32+00:00'
+      :id: 1AqQQzRvKAkEOekuMUcQIY
+    :title: Content management > copy
+    :copy: |-
+      Der Aufbau einer einfachen Anwendung die Contentful benutzt, besteht aus einer Anwendung, die den Inhalt liest, wie zum Beispiel diese Beispielanwendung und einer Weiteren, die den Inhalt erzeugt und verändert. Dies ist die Contentful Web-Anwendung. Die Anwendung liest den Inhalt, indem sie sich mit der Content Delivery API verbindet. Die Contentful Web-Anwendung schreibt Inhalt indem sie mit der Content Management API verbunden ist:
+
+      ![minimal contentful setup](//images.contentful.com/qz0n5cdakyl9/3z7ErmBLIccwQkQkuEY0w4/792f81c7d92d195abf89ea936071d1f6/webapp-contentful-example-app.svg)
+
+      Die *Contentful Web-Anwendung* ist eine _single page_ Anwendung, die von Contentful zur Verfügung gestellt wird, um alle Aufgaben rund ums Content Management zu erledigen:
+
+      - Schreiben von Inhalten durch Autoren.
+      - Einrichten des Spaces, der Content Types, Zugriffsrechte und Webhook-Benachrichtigungen durch Entwickler.
+
+      Wie bereits erwähnt, benutzt die Contentful Web-Anwendung die Content Management API. Daher können Sie diese Funktionen selber nachbauen, indem Sie die gleichen API-Anfragen durchführen. Dies ist ein sehr mächtiger Aspekt der _API-First_-Sichtweise, da sie Ihnen hilft Contentful in Contentful-fremden Systemen einzusetzen.
+  - :id: 5DtGCVHfr2OC2Is6KceS0G
+    :_meta:
+      :content_type_id: lessonImage
+      :updated_at: '2018-02-13T07:40:35+00:00'
+      :created_at: '2018-02-13T07:40:35+00:00'
+      :id: 5DtGCVHfr2OC2Is6KceS0G
+    :title: Content management > image
+    :image:
+      :title: 'Screenshot: Contentful web app'
+      :description: 
+      :url: "//images.contentful.com/ogkuoprm03sm/4CWJDjGTzaU8CMAW2eYeie/771dc1704a6b6effeadcc507a0d34746/webapp.png"
+      :_meta:
+        :updated_at: '2018-02-13T07:40:38+00:00'
+        :created_at: '2018-02-13T07:40:38+00:00'
+        :id: 4CWJDjGTzaU8CMAW2eYeie
+    :caption: Die Contentful Web-Anwendung ist eine single page Anwendung, die die
+      Content Management API benutzt. Sie kann genutzt werden um Inhalte zu Erzeugen
+      und um Einstellungen an Contentful vorzunehmen.
+- :id: 3KinTi83FecuMeiUo0qGU4
+  :_meta:
+    :content_type_id: lesson
+    :updated_at: '2018-02-13T07:40:31+00:00'
+    :created_at: '2018-02-13T07:40:31+00:00'
+    :id: 3KinTi83FecuMeiUo0qGU4
+  :title: Zusammenfassung
+  :slug: summary
+  :modules:
+  - :id: 5jR4ciJ8Y8m2KKqmMKOkg4
+    :_meta:
+      :content_type_id: lessonCopy
+      :updated_at: '2018-02-13T07:40:33+00:00'
+      :created_at: '2018-02-13T07:40:33+00:00'
+      :id: 5jR4ciJ8Y8m2KKqmMKOkg4
+    :title: Summary > copy
+    :copy: |-
+      In diesem Kurs haben sie die grundlegenden Konzepte von Contentful kennengelernt:
+
+      - `API-first`-Denkweise von Contentful erleichtert die Verbindung von Contentful und Contentful-fremden Systemen.
+      - Contentful ist `headless` und bietet sowohl JSON als auch binäre Antworten an.
+      - Eine `Client`-Anwendung die Inhalte von Contentful verarbeitet, hat stets die volle Kontrolle über visuelle representation des Inhalts.
+      - Datenmodellierung innerhalb von Contentful benutzt flexible Content Typen, die entkoppelt von der Presentation ist.
+      - Die Contentful Web-Anwendung ist ein einfach zu verwendender Editor.
+:categories:
+- :id: 6ucY5w3oswEU6EYSCEi0C8
+  :_meta:
+    :content_type_id: category
+    :updated_at: '2018-02-13T07:40:36+00:00'
+    :created_at: '2018-02-13T07:40:36+00:00'
+    :id: 6ucY5w3oswEU6EYSCEi0C8
+  :title: Einstiegskurs
+  :slug: getting-started

@@ -1,5 +1,6 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
+require 'contentful_middleman'
 
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
@@ -12,6 +13,19 @@ end
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+
+activate :contentful do |f|
+  f.space         = { api: 'ogkuoprm03sm' }
+  f.access_token  = 'f858465b24a802271f033bc9fba6d33c8822eb5858474ac97500bec3243143aa'
+  f.cda_query     = { limit: 1000 }
+  f.content_types = {
+    course: 'course',
+  }
+
+  # f.dynamic_entries = :auto
+  # f.content_types = {course: "course"}
+  # f.cda_query = {content_type: "course"}
+end
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
